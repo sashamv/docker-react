@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo 'Hello world!'
                 sh "docker version"
+                sh "docker build -t docker-react -f Dockerfile.dev ." 
                 sh "hostname -f"
             }
         }
