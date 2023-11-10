@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo 'Hello world!'
                 sh "docker version"
+                sh "hostname -f"
             }
         }
     }
