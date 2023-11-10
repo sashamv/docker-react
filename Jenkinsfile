@@ -8,5 +8,15 @@ pipeline {
                 sh "hostname -f"
             }
         }
+        stage('Build Dev Dockerfile'){
+            agent {
+                dockerfile {
+                   filename 'Dockerfile.dev' 
+                }
+            }
+            steps {
+               sh "hostname -f" 
+            }
+        }
     }
 }
