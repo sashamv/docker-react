@@ -18,6 +18,6 @@ pipeline {
                echo "Try to build image using a Dockerfile.dev file" 
                sh "docker build -t docker-react -f Dockerfile.dev ." 
             }
-        }
-    }*/
+        }*/
+    }
 }
