@@ -9,9 +9,8 @@ pipeline {
                 //sh "docker run -e CI=true docker-react npm run test -- --coverage"
             }
         }
-        stage('Build Dev Dockerfile') {
+        stage('Test') {
             steps {
-               echo "Try to build image using a Dockerfile.dev file" 
                sh "docker run -e CI=true docker-react npm run test -- --coverage" 
             }
         }
