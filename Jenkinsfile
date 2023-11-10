@@ -9,13 +9,14 @@ pipeline {
             }
         }
         stage('Build Dev Dockerfile'){
-            agent {
-                dockerfile {
+        /*    agent {
+               dockerfile {
                    filename 'Dockerfile.dev' 
                 }
-            }
+            }*/
             steps {
-               sh "hostname -f" 
+               echo "Try to build image using a Dockerfile.dev file" 
+               sh "docker build -t docker-react -f Dockerfile.dev ." 
             }
         }
     }
