@@ -12,7 +12,7 @@ pipeline {
         stage('Build Dev Dockerfile') {
             steps {
                echo "Try to build image using a Dockerfile.dev file" 
-              // sh "docker build -t docker-react -f Dockerfile.dev ." 
+               sh "docker build -t docker-react -f Dockerfile.dev ." 
             }
         }
     }
